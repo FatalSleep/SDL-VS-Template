@@ -24,17 +24,17 @@ CREATING A NEW PROJECT:
 
 7. Under "C++" and "General" add a new file path:
   
-  - `$(ProjectDir)\Dependencies\SDL\include;`
+  - `$(ProjectDir)Dependencies\SDL\include;`
   
 8. Set the "Platform" to "Win32."
 9. Under "VC++ Directories" and "Library Directories" add a new file path:
 
-  - `$(ProjectDir)\Dependencies\SDL\lib\x86;`
+  - `$(ProjectDir)Dependencies\SDL\lib\x86;`
 
 10. Set the "Platform" to "x64."
 11. Under "VC++ Directories" and "Library Directories" add a new file path:
 
-  - `$(ProjectDir)\Dependencies\SDL\lib\x64;`
+  - `$(ProjectDir)Dependencies\SDL\lib\x64;`
   
 12. Under "Build Events" and "Pre-Link Event" add the following command line code:
  
