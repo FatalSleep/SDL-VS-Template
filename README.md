@@ -4,7 +4,7 @@ This is a project/solution that references SDL relative to it's own directory pa
 
 NOTE:
 -------
-VS templates don't copy over project properties or folders you've added manually to your project folder. So templates in VS are a bust.
+If you'd like to setup SDL without using the pre-built template then follow the below instructions.
 
 CREATING A NEW PROJECT:
 ------
@@ -35,12 +35,17 @@ CREATING A NEW PROJECT:
 11. Under "VC++ Directories" and "Library Directories" add a new file path:
 
   - `$(ProjectDir)Dependencies\SDL\lib\x64;`
-  
-12. Under "Build Events" and "Pre-Link Event" add the following command line code:
+
+12. Go into "Linker" and into "Input" and add the following LIB files to the "Additional Dependencies."
+
+  - 'SDL2.lib'
+  - 'SDL2main.lib'
+
+13. Under "Build Events" and "Pre-Link Event" add the following command line code:
  
   - copy "$(ProjectDir)Dependencies\SDL\lib\x86\SDL2.dll" "$(TargetDir)\SDL2.dll"
   
-13. Finally copy your SDL LIB/INCLUDES to:
+14. Finally copy your SDL LIB/INCLUDES to:
  
   - $(ProjectDir)Dependencies\SDL\
   
