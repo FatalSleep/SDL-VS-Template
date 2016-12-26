@@ -45,11 +45,13 @@ CREATING A NEW PROJECT:
   - 'SDL2.lib'
   - 'SDL2main.lib'
 
-13. Under "Build Events" and "Pre-Link Event" add the following command line code:
+13. Go into "Linker" and then "System" and set the "Subsystem" to either to 'WINDOwS (/SUBSYSTEM:WINDOWS)' so that SDL can grab the window for graphics rendering.
+
+14. Under "Build Events" and "Pre-Link Event" add the following command line code:
  
   - copy "$(ProjectDir)Dependencies\SDL\lib\x86\SDL2.dll" "$(TargetDir)\SDL2.dll"
   
-14. Finally copy your SDL LIB/INCLUDES to:
+15. Finally copy your SDL LIB/INCLUDES to:
  
   - $(ProjectDir)Dependencies\SDL\
   
