@@ -2,6 +2,10 @@ SDL Project/Solution Base
 ==
 This is a project/solution that references SDL relative to it's own directory paths. You can use the project "as is," or use the below steps to setup your own project with the same settings and properties.
 
+The VS template doesn't copy the SDL binaries for you, so you'll need to get the SDL binaries from the official SDL website. Then you'll need to copy the binaries to your project directory at: 'C:\...\ProjectName\Dependencies\SDL\'
+
+Make sure the LIB and INCLUDE folders are directly in '.\Dependencies\SDL\' not in the '.\SDL-x-x\' folder. Make sure to also copy the binaries into your project directory, not the solution directory if you have one for your VS project.
+
 NOTE:
 -------
 If you'd like to setup SDL without using the pre-built template then follow the below instructions.
